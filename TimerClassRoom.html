@@ -1,8 +1,13 @@
-﻿<div class="jumbotron">
+﻿<div id="TimeDiv" class="jumbotron">
     <h1>Timer</h1>
     <div id="inputArea"></div>
     <button id="stopButton" onclick="stopCounter()">Stop</button>
     <h2 id="time">0:00</h2>
 </div>
+<div id="TimerDone">
+    <h1>Time is up!</h1>
+    <button onclick="stopSound()">Stop</button>
+</div>
 <link rel="stylesheet" href="site.css">
 <script src="script.js"></script>
+<source src="horns.mp3" type="audio/mpeg">

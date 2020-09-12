@@ -1,6 +1,8 @@
 ﻿var mySeconds;
 var intervalHandle;
 var stopNow = false;
+var audio = new Audio('horns.mp3');
+var stopAudio = true;
 
 function resetPage() {
 	document.getElementById("inputArea").style.display = "block";
@@ -26,12 +28,25 @@ function tick() {
 	}
 
 	else if(mySeconds === 0) {
-		alert("Done");
 		clearInterval(intervalHandle);
+		document.getElementById("TimerDone").style.display = "block";
+		document.getElementById("TimeDiv").style.display = "none";
+		while(stopAudio){
+			audio.play();
+		}
 		resetPage();
 	}
 	mySeconds--;
 }
+
+function stopSound(){
+	stopAudio = false;
+	document.getElementById("TimeDiv").style.display = "block";
+	document.getElementById("TimeDone").style.display = "none";
+	audio.stop()
+
+}
+
 function startCounter() {
 	var myInput = document.getElementById("minutes").value;
 	if (isNaN(myInput)) {
