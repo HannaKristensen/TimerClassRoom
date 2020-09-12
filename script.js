@@ -1,8 +1,10 @@
 ﻿var mySeconds;
 var intervalHandle;
+var stopNow = false;
 
 function resetPage() {
-	document.getElementById("inputArea").style.display = "none";
+	document.getElementById("inputArea").style.display = "block";
+	stopNow = false;
 }
 function tick() {
 	var timeDisplay = document.getElementById("time");
@@ -17,8 +19,13 @@ function tick() {
 	var message = min.toString() + ":" + sec;
 
 	timeDisplay.innerHTML = message;
+	if(stopNow == true){
+		clearInterval(intervalHandle);
+		document.getElementById("time").innerHTML = "0:00";
+		resetPage();
+	}
 
-	if (mySeconds === 0) {
+	else if(mySeconds === 0) {
 		alert("Done");
 		clearInterval(intervalHandle);
 		resetPage();
@@ -36,6 +43,10 @@ function startCounter() {
 	intervalHandle = setInterval(tick, 1000);
 
 	document.getElementById("inputArea").style.display = "none";
+}
+
+function stopCounter(){
+	stopNow = true;
 }
 
 window.onload = function () {
