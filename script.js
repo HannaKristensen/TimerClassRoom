@@ -6,6 +6,7 @@ var stopAudio = true;
 
 function resetPage() {
 	document.getElementById("inputArea").style.display = "block";
+	document.getElementById("TimerDone").style.display = "none";
 	stopNow = false;
 }
 function tick() {
@@ -63,6 +64,7 @@ function stopCounter(){
 }
 
 window.onload = function () {
+
 	var myInput = document.createElement("input");
 	myInput.setAttribute("type", "text");
 	myInput.setAttribute("id", "minutes");
