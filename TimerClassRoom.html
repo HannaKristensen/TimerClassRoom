@@ -1,23 +1,25 @@
-﻿<img id="mc" src="Dolphin.webp">
-<img id="d" src="ba59e_mv2.png">
-<div id="TimeDiv" class="jumbotron">
-    <h1>Timer</h1>
-    <div id="inputArea"></div>
-    <br/>
-    <button id="stopButton" onclick="stopCounter()">Stop</button>
-    <h2 id="time">0:00</h2>
-</div>
-<div id="TimerDone">
-    <h1>Time is up!</h1>
-    <button onclick="stopSound()">Stop</button>
-</div>
-<div>
-    <label for="cars">Choose alarm sound:</label>
-    <select name="sound" onchange="changeSound()" id="sound">
-        <option value="horns.mp3">Horns</option>
-        <option value="Danzon De Pasion.mp3">Jazz</option>
-        <option value="Sour Tennessee Red.mp3">Country</option>
-    </select>
-</div>
-<link rel="stylesheet" href="site.css">
-<script src="script.js"></script>
+﻿<html>
+    <img id="mc" style="background:url('Dolphin.webp') no-repeat">
+    <img id="d" style="background:url('ba59e_mv2.png') no-repeat">
+    <div id="TimeDiv" class="jumbotron">
+        <h1>Timer</h1>
+        <div id="inputArea"></div>
+        <br/>
+        <button id="stopButton" onclick="stopCounter()">Stop</button>
+        <h2 id="time">0:00</h2>
+    </div>
+    <div id="TimerDone">
+        <h1>Time is up!</h1>
+        <button onclick="stopSound()">Stop</button>
+    </div>
+    <div>
+        <label for="cars">Choose alarm sound:</label>
+        <select name="sound" onchange="changeSound()" id="sound">
+            <option value="horns.mp3">Horns</option>
+            <option value="Danzon De Pasion.mp3">Jazz</option>
+            <option value="Sour Tennessee Red.mp3">Country</option>
+        </select>
+    </div>
+    <link rel="stylesheet" href="site.css">
+    <script src="script.js"></script>
+</html>

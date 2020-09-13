@@ -2,7 +2,8 @@
     padding-top: 50px;
     padding-bottom: 20px;  
     text-align: center;
-    background-color: #38acff;
+    background: url("Dolphin.webp") left 40px top 150px no-repeat, url("ba59e_mv2.png") right 30px bottom 40px no-repeat, #38acff;
+    padding: 50px;
 }
 
 /* Set padding to keep content from hitting the edges */
