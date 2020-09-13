@@ -63,6 +63,12 @@ function stopCounter(){
 	stopNow = true;
 }
 
+function changeSound(){
+	var e = document.getElementById("sound");
+	var value = e.options[e.selectedIndex].value;
+	audio = new Audio(value);
+}
+
 window.onload = function () {
 
 	var myInput = document.createElement("input");

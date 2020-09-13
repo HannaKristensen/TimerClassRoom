@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;  
     text-align: center;
-    background-color: gray;
+    background-color: #38acff;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,4 +28,36 @@ textarea {
 #TimerDone{
 
     display: none;
+}
+
+button, input{
+    border-radius: 8px;
+    font-size: 50px;
+
+}
+h1, h2{
+    font-size: 80px;
+}
+
+label, select{
+font-size: 50px;
+
+}
+
+#md{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#mc{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+#d{
+    position: absolute;
+    top: 80px;
+    right: 20px;
 }
