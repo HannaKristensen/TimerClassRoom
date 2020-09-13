@@ -51,10 +51,22 @@ function stopSound(){
 function startCounter() {
 	document.getElementById("list").style.display = "none";
 	var myInput = document.getElementById("minutes").value;
+
 	if (isNaN(myInput)) {
 		alert("Type a valid number please");
 		return;
 	}
+
+	if(myInput < 0.1){
+		alert("Too small of a number");
+		return;
+	}
+
+	if(myInput > 500){
+		alert("Too big of a number");
+		return;
+	}
+
 	mySeconds = myInput * 60;
 
 	intervalHandle = setInterval(tick, 1000);
