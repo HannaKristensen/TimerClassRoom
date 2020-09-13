@@ -41,7 +41,7 @@ function tick() {
 function stopSound(){
 	audio.pause();
 	document.getElementById("TimeDiv").style.display = "block";
-	document.getElementById("TimeDone").style.display = "none";
+	document.getElementById("TimerDone").style.display = "none";
 	resetPage();
 
 }
