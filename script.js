@@ -49,7 +49,6 @@ function stopSound(){
 }
 
 function startCounter() {
-	document.getElementById("list").style.display = "none";
 	var myInput = document.getElementById("minutes").value;
 
 	if (isNaN(myInput)) {
@@ -66,6 +65,8 @@ function startCounter() {
 		alert("Too big of a number");
 		return;
 	}
+	
+	document.getElementById("list").style.display = "none";
 
 	mySeconds = myInput * 60;
 
