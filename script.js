@@ -29,21 +29,19 @@ function tick() {
 
 	else if(mySeconds === 0) {
 		clearInterval(intervalHandle);
-		document.getElementById("TimerDone").style.display = "block";
 		document.getElementById("TimeDiv").style.display = "none";
-		while(stopAudio){
-			audio.play();
-		}
-		resetPage();
+		document.getElementById("TimerDone").style.display = "block";
+		audio.loop = true;
+		audio.play();
 	}
 	mySeconds--;
 }
 
 function stopSound(){
-	stopAudio = false;
+	audio.pause();
 	document.getElementById("TimeDiv").style.display = "block";
 	document.getElementById("TimeDone").style.display = "none";
-	audio.stop()
+	resetPage();
 
 }
 
