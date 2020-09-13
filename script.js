@@ -7,6 +7,7 @@ var stopAudio = true;
 function resetPage() {
 	document.getElementById("inputArea").style.display = "block";
 	document.getElementById("TimerDone").style.display = "none";
+	document.getElementById("list").style.display = "block";
 	stopNow = false;
 }
 function tick() {
@@ -42,11 +43,13 @@ function stopSound(){
 	audio.pause();
 	document.getElementById("TimeDiv").style.display = "block";
 	document.getElementById("TimerDone").style.display = "none";
+	document.getElementById("list").style.display = "block";
 	resetPage();
 
 }
 
 function startCounter() {
+	document.getElementById("list").style.display = "none";
 	var myInput = document.getElementById("minutes").value;
 	if (isNaN(myInput)) {
 		alert("Type a valid number please");
